@@ -28,7 +28,7 @@ public class UserController extends BaseController {
     //用户登录接口
     @PostMapping("/login")
     public CommonReturnType login(@RequestParam(name = "telephone") String telephone,
-                                  @RequestParamk(name = "password") String password) throws BusinessException {
+                                  @RequestParam(name = "password") String password) throws BusinessException {
 
         if (StringUtils.isEmpty(telephone) || StringUtils.isEmpty(password)) {
             throw new BusinessException(EmBusinessError.PARAMMETER_VALIDATION_ERROR);
